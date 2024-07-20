@@ -16,22 +16,35 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPointFirst;
     public Transform spawnPointSecond;
     public Transform spawnPointThird;
-
+    public Image healthBar;
     public float timeBetweenWaves = 5.5f;
     private float countdown = 2f;
+    private int lives;
+    private int lives2;
 
     public Text WaveCountdownText;
 
     private int waveIndex = 0;
 
-    private void Start()
+    private void Awake()
     {
         EnemiesAlive = 0;
         countdown = timeBetweenWaves;
+        lives = PlayerStats.Lives;
     }
 
     private void Update()
     {
+        if (lives2 == 0)
+        {
+            Debug.Log("НУЛЬ!!!!");
+            healthBar.fillAmount = 0;
+        }
+        lives2 = PlayerStats.Lives;
+        
+        healthBar.fillAmount = (float)lives2 / lives;
+
+        
         if (EnemiesAlive > 0)
         {
             return;
