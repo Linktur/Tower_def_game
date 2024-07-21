@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        
+        SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, 1f);
         healthBar.fillAmount = health/startHealth;
         if (health <= 0)
         {
