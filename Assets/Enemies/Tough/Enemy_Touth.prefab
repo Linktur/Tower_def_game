@@ -504,10 +504,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e07c2f33c8d1440a40000c2b1ca459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 7
+  startSpeed: 2
   speed: 15
-  health: 100
-  startHealth: 350
+  health: 400
+  startHealth: 400
   worth: 140
   minimumDistanceCollision: 0.4
   deathEffect: {fileID: 4528812721073403556, guid: a478d6f6f9d910b47b08db160cdbd42b, type: 3}

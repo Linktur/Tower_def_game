@@ -636,8 +636,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 10
   speed: 15
-  health: 100
-  startHealth: 100
+  health: 0
+  startHealth: 0
   worth: 50
   minimumDistanceCollision: 0.4
   deathEffect: {fileID: 4528812721073403556, guid: d7716765c82cda34492e45d734742937, type: 3}
