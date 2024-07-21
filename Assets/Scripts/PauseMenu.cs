@@ -1,11 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject ui;
     public SceneFader sceneFader;
-    public string mainMenuSceneName = "MainMenu";
+    public Button retry;
+    public Button mainMenu;
+    public Button continueButton;
+    public string mainMenuSceneName = "StartMenu";
+
+    private void Start()
+    {
+        retry.onClick.AddListener(Retry);
+        mainMenu.onClick.AddListener(Menu);
+        continueButton.onClick.AddListener(Toggle);
+    }
 
     void Update()
     {

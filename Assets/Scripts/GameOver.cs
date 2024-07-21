@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -9,7 +7,18 @@ public class GameOver : MonoBehaviour
 {
     public Text roundsText;
     public SceneFader sceneFader;
-    public string mainMenuSceneName = "MainMenu";
+    public Button retry;
+    public Button mainMenu;
+    public string mainMenuSceneName = "StartMenu";
+
+    private void Start()
+    {
+        if (retry != null)
+        {
+            retry.onClick.AddListener(Retry);
+        }
+        mainMenu.onClick.AddListener(Menu);
+    }
 
     private void OnEnable()
     {
@@ -23,6 +32,8 @@ public class GameOver : MonoBehaviour
 
     public void Menu()
     {
+        Debug.Log("я хуй!");
+
         sceneFader.FadeTo(mainMenuSceneName);
     }
 }

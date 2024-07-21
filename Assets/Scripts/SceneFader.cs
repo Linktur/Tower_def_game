@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -17,6 +15,8 @@ public class SceneFader : MonoBehaviour
 
     public void FadeTo(string scene)
     {
+        Debug.Log("он ъуй!");
+
         StartCoroutine(FadeOut(scene));
     }
 
@@ -37,12 +37,13 @@ public class SceneFader : MonoBehaviour
         float t = 0f; //1 to 0 
         while (t < 1f)
         {
+            Debug.Log("я работаю!");
             t += Time.deltaTime * 1f;//speed for duration
             float a = curve.Evaluate(t);
             img.color = new Color(0f, 0f, 0, a);
             yield return 0;
         }
-
+        
         SceneManager.LoadScene(scene);
     }
 }
