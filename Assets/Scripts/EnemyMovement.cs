@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
@@ -9,14 +11,16 @@ public class EnemyMovement : MonoBehaviour
     private Transform target;
     private int wavePointIndex;
     private WaveSpawner wave;
-
+    private Image fill1 ;
     private Enemy enemy;
+
+    private int lives2;
 
     public void SetPath(Transform[] _paths)
     {
         path = _paths;
     }
-
+    
     private void Start()
     {
         enemy = GetComponent<Enemy>();
@@ -25,6 +29,8 @@ public class EnemyMovement : MonoBehaviour
     
     private void Update()
     {
+      
+
         if (target.position != null)
         {
             Vector3 dir = target.position - transform.position;
