@@ -16112,12 +16112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurret:
     prefab: {fileID: 5259903931087055078, guid: add4d9e06e66c4f4bbff322930bb6580, type: 3}
-    cost: 100
+    cost: 250
     upgradedPrefab: {fileID: 0}
     upgradeCost: 60
   missleLauncher:
     prefab: {fileID: 4327323585466387488, guid: 57e88fa4365b6ec4294081652492503c, type: 3}
-    cost: 250
+    cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 90
   laserBeamer:
