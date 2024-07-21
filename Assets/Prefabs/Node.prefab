@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6949916274649433626
 MeshFilter:
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.19751638, g: 0.7735849, b: 0.04743683, a: 0}
   notEnoughMoneyColor: {r: 0.8396226, g: 0.027723404, b: 0.027723404, a: 0}
-  positionOffset: {x: 0, y: 0.5, z: 0}
+  positionOffset: {x: -2.25, y: 4, z: 1.5}
   turret: {fileID: 0}
   turretBlueprint:
     prefab: {fileID: 0}
