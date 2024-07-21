@@ -62,52 +62,13 @@ public class WaveSpawner : MonoBehaviour
             switch (value)
             {
                 case 1:
-                    if ((path1[0] != null))
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path1);
-                    }
-
-                    if (path2[0] != null)
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path2);
-                    }
-                    
-                    if (path3[0] != null)
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path3);
-                    }
+                    SpawnEnemy(wave.enemy, spawnPointFirst, path1);
                     break;
                 case 2:
-                    
-                    if (path2[0] != null)
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path2);
-                    }
-                    
-                    if (path3[0] != null)
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path3);
-                    }
-                    if ((path1[0] != null))
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path1);
-                    }
-
+                    SpawnEnemy(wave.enemy, spawnPointSecond, path2);
                     break;
                 case 3:
-                    if (path3[0] != null)
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path3);
-                    }
-                    if ((path1[0] != null))
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path1);
-                    }
-
-                    if (path2[0] != null)
-                    {
-                        SpawnEnemy(wave.enemy, spawnPointFirst, path2);
-                    }
+                    SpawnEnemy(wave.enemy, spawnPointThird, path3);
                     break;
             }
             
