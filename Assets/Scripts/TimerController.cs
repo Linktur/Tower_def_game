@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds) + " to victory";
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     void EndGame()
