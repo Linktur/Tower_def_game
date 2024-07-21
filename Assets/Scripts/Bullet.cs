@@ -58,7 +58,7 @@ public class Bullet : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag("Enemy"))//.tag==
+            if (collider.CompareTag("Enemy"))
             {
                 Damage(collider.transform);
             }
