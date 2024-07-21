@@ -128,3 +128,6 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isUpgraded: 0
+  buildSoundClip: {fileID: 8300000, guid: f81f83b096b7da04b80ad582ce8953b9, type: 3}
+  sellSoundClip: {fileID: 8300000, guid: 04bb76a96f93ed94eadec9335d41e23e, type: 3}
+  upgradeSoundClip: {fileID: 8300000, guid: 7bcdb4571bb2a68419cffc0c53e95782, type: 3}
