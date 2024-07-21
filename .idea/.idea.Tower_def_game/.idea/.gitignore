@@ -4,7 +4,6 @@
 # Rider ignored files
 /projectSettingsUpdater.xml
 /.idea.Tower_def_game.iml
-/modules.xml
 /contentModel.xml
 # Editor-based HTTP Client requests
 /httpRequests/

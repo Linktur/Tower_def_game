@@ -47,7 +47,7 @@ public class Node : MonoBehaviour
 
         BuildTurret(buildManager.GetTurretToBuild());
     }
-
+    [SerializeField] private AudioClip buildSoundClip;
     void BuildTurret(TurrentBlueprint blueprint)
     {
         if (PlayerStats.Money < blueprint.cost)
@@ -55,7 +55,7 @@ public class Node : MonoBehaviour
             Debug.Log("Not enouth money!");
             return;
         }
-
+        SoundFXManager.instance.PlaySoundFXClip(buildSoundClip, transform, 1f);   
         PlayerStats.Money -= blueprint.cost;
 
         turretBlueprint = blueprint;
@@ -69,18 +69,18 @@ public class Node : MonoBehaviour
         if (!turretBlueprint.upgradedPrefab)//fix for not having updated tower
             isUpgraded = true;
     }
-
+    [SerializeField] private AudioClip sellSoundClip;
     public void SellTurret()
     {
         PlayerStats.Money += turretBlueprint.GetSellAmount();
-        
+        SoundFXManager.instance.PlaySoundFXClip(sellSoundClip, transform, 1f);     
         GameObject effect = (GameObject) Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
         
         Destroy(turret);
         turretBlueprint = null;
     }
-
+    [SerializeField] private AudioClip upgradeSoundClip;
     public void UpgradeTurret()
     {
         if (PlayerStats.Money < turretBlueprint.upgradeCost)
@@ -88,7 +88,7 @@ public class Node : MonoBehaviour
             Debug.Log("Not enouth money to upgrade that!");
             return;
         }
-
+        SoundFXManager.instance.PlaySoundFXClip(upgradeSoundClip, transform, 1f);
         PlayerStats.Money -= turretBlueprint.upgradeCost;
 
         //Get rid of the old turret

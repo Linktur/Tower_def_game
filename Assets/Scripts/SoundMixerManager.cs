@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -7,16 +8,31 @@ public class SoundMixerManager : MonoBehaviour
 
     public void SetMasterVolume(float level)
     {
+        audioMixer.SetFloat("masterVolume", level);
+    }
+
+    public void SetSoundFXVolume(bool level)
+    {
+        if (level)
+        {
+            audioMixer.SetFloat("soundFXVolume", 0f);            
+        }
+        else
+        {
+            audioMixer.SetFloat("soundFXVolume", -80f);
+        }
         
     }
 
-    public void SetSoundFXVolume(float level)
+    public void SetMusicVolume(bool level)
     {
-        audioMixer.SetFloat("SoundFXVolume", level);
-    }
-
-    public void SetMusicVolume(float level)
-    {
-        audioMixer.SetFloat("MusicVolume", level);
+        if (level)
+        {
+            audioMixer.SetFloat("musicVolume", 0f);            
+        }
+        else
+        {
+            audioMixer.SetFloat("musicVolume", -80f);
+        }
     }
 }
